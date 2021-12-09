@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Shy Devil - Bio</title>
+</head>
+<body>
+
+    <!-- Audio Tag vor background music-->
+    <audio id="audio" loop>
+        <source src="sound.mp3" type="audio/mpeg">
+        Leider unterstützt dein Browser dieses Element nicht
+    </audio>
+
+    
+    <!-- "Main menu" button -->
+    <!-- Allows to play music -->
+    <div id="splash">
+        <button id="splash_button" onclick="play()">Click Here to Show this Page</button>
+    </div>
+
+    <div id="content">
+
+        <!-- Top page Space + text glitch effect-->
+        <div class="spacer"></div>
+        <h1>Shy Devil</h1>
+        <h1>Shy Devil</h1>
+        <h1>Shy Devil</h1>
+
+        <!-- Quote placement and styling-->
+        <center style="margin-top: 60px;"><p><i id="zitat">---</i></p></center>
+
+        <script>
+
+            // Script to show qotes
+            var zitate = [  "Love like you've never been hurt before", 
+                            "Make people feel loved",
+                            "To be together, you have to-get-her",
+                            "Life is pointless, so give it a purpose",
+                            "Never play with someone's feelings",
+                            "It's okay to be sad",
+                            "Hang on to that love",
+                            "Dream without fear",
+                            "You are being loved",
+                            "scars shape your character",
+                            "Music helped me survive",
+                            "Song lyrics sometimes relate to you too, don't they?",
+                            "You can't love without loving yourself",
+                            "What if failed relationships prepare you for the right one?",
+                            "Nothing lasts forever",
+                            "I easily get jealous",
+                            "Don't teamkill in online games...",
+                            "Don't be rude. People have feelings too",
+                            "Don't love someone because of their body",
+                            "Cuddling is the best",
+                            "What is life?",
+                            "True love can't be denied",
+                            "Take care of your friends",
+                            "Do you feel lonely?",
+                            "Do you feel pain?",
+                            "I love Nightcore",
+                            "Not mobile optimized, sorry.",
+                            "Time will teach you",
+                            "Love without limits",
+                            "Sometimes holding on does more damage than letting go", 
+                            "Don't leave a scar, leave a memory"];
+
+            var item = zitate[Math.floor(Math.random() * zitate.length)];
+            document.getElementById("zitat").innerHTML = item;
+
+        </script>
+
+
+        <!-- Begin of actual content container-->
+        <div id="more-content">
+            
+            <h2>About me</h2>
+            I'm 19 years old and my name is Marcel. I live in Austria where we speak German.
+            I like to play video games, to <a href="https://www.youtube.com/playlist?list=PL2xF-BCo1FWYMw-gbaAOMZAVxLXW_VTiy" target="_blank">
+            listen to music</a>, to talk to  my friends and to play guitar <i>(still learning)</i>. I also like programming. My birthday: 13th May, 2002<br><br>
+
+
+            I really love anime. I'd recommend watching Angel Beats, Black Butler, Date A Live and a lot more! If you're one of those people who always keep
+            hating anime: its totally fine. But have you every actually tried finding and watching some good anime? I bet not ;P<br><br>
+
+            There is not a lot to say about me. Im mostly shy but im generally open to everyone. Im also not that good at social stuff and showing emotions,
+            but i try my best to improve everyday!<br><br>
+
+            If you get to know me better you will learn how to read me. If you're ever bored just text me i like to have conversations.<br><br>
+
+
+            Because of my past i gained a lot of knowledge, so if you
+            ever feel sad/down and you want somebody to chat with, <a href="#contact">contact me</a>.<br><br><br><br>
+
+
+            
+
+            <h2>Games I like to play</h2>
+            <ul>
+                <li>Pavlov VR</li>
+                <li>Fallout 4</li>
+                <li>Code Vein</li>
+                <li>State of Decay 2</li>
+                <li>Minecraft (but not PVP)</li>
+            </ul><br><br><br><br>
+
+
+
+
+            <h2><a style="color: white;" name="contact">Contact</a></h2>
+            If you want to get in touch with me you can contact me by using one of the listed methods below.
+
+            <ul>
+                <li>Discord: Shy Devil#0001</li>
+                <li>Github (<a href="https://github.com/hackthedev" target="_blank">click</a>)</li>
+                <li>Steam (<a href="https://steamcommunity.com/id/adsoleware/" target="_blank">click</a>)</li>
+            </ul>
+
+            <br><br>
+            <center><i>Last Updated: December, 9th 2021.</i></center>
+
+            <script>
+
+                var config = 0;
+        
+                if(config == 1){
+                    document.getElementById("splash").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                }
+        
+                // Play sound when clicking the button and also hide and show content page
+                function play() {
+                  var audio = document.getElementById("audio");
+                  
+                  if(config != 1){
+                    audio.play();
+                    audio.volume = 0.1;
+
+                    document.getElementById("splash").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                  }
+                }
+        
+              </script>
+
+
+        <!-- End of Content Container -->
+        </div>
+    </div>
+
+</body>
+</html>
